@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>文本显示</title>
+    <script type="text/javascript"></script>
+<body >
+
+<form action="/insert">
+
+    文字:<input type="text" name="content"/>
+    <input type="submit" value="提交">
+
+</form>
+
+<thead>
+<tr th:each="text:${textList}">
+    <td th:text="${text.content}"></td>
+</tr>
+</thead>
+</body>
+</html>
