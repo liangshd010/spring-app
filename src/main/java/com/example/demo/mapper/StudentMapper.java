@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.mapper;
 
+import com.example.demo.bean.Student;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 

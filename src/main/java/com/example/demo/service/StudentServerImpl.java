@@ -1,9 +1,10 @@
-package com.example.demo;
+package com.example.demo.service;
 
+import com.example.demo.bean.Student;
+import com.example.demo.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.LinkedList;
 import java.util.List;
 
 @Repository
