@@ -1,4 +1,4 @@
-package com.example.demo.polo;
+package com.example.demo.entity;
 
 import java.io.Serializable;
 import java.util.Date;
