@@ -9,7 +9,17 @@
         <result column="passWord" jdbcType="VARCHAR" property="passWord" />
         <result column="realName" jdbcType="VARCHAR" property="realName" />
     </resultMap>
-    <select id="sel" resultType="com.example.demo.entity.User">
+
+    <resultMap id="otherResultMap" type="com.example.demo.entity.User">
+        <result column="ids" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="userName"/>
+    </resultMap>
+
+    <select id="sel1" resultType="com.example.demo.entity.User" resultMap="BaseResultMap">
         select * from user where id = #{id}
+    </select>
+
+    <select id="sel" resultType="com.example.demo.entity.User" resultMap="otherResultMap">
+        select id as ids, userName as name from user where id = #{id}
     </select>
 </mapper>
