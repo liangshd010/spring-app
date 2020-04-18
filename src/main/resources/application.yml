@@ -1,14 +1,14 @@
 # 先从application.yml读取配置，后从application.properties中读取，若重复，则覆盖
-server:
-  port: 8081
+#server:
+#  port: 8081
 
 spring:
-  datasource:
-    name: lsd
-    url: jdbc:mysql://localhost:3306/kunlun?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
-    username: root
-    password: spring
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#  datasource:
+#    name: lsd
+#    url: jdbc:mysql://localhost:3306/kunlun?useSSL=false&useUnicode=true&characterEncoding=utf-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+#    username: root
+#    password: spring
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 
   redis:
     database: 0
