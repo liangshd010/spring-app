@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.bean.Student;
+import com.example.demo.service.MailService;
 import com.example.demo.service.StudentServerImpl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,9 @@ public class DemoApplication {
 	@Autowired
 	private StudentServerImpl studentServer;
 
+	@Autowired
+	private MailService mailService;
+
 	public static void main(String[] args) {
 
 		SpringApplication.run(DemoApplication.class, args);
@@ -35,6 +39,15 @@ public class DemoApplication {
 	@RequestMapping("/getStudentList")
 	public List<Student> getStudentList() {
 		return studentServer.getStudentList();
+	}
+
+	@RequestMapping("/sendEmail")
+	public String sendEmail() {
+		String TO = "xxx@qq.com";
+		String SUBJECT = "测试邮件";
+		String CONTENT = "test content";
+		mailService.sendSimpleMailMessage(TO,SUBJECT,CONTENT);
+		return "Sending message";
 	}
 
 }
