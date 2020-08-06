@@ -31,7 +31,7 @@ public class DemoApplication {
 		System.out.println("application is started");
 	}
 
-	@RequestMapping("/hello")
+	@RequestMapping("/index")
 	public String index() {
 		return "Hello World";
 	}
